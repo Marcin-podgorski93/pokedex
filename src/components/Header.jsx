@@ -1,16 +1,10 @@
 function Header() {
   return (
-    <header className="relative text-white text-center p-4 mt-3">
+    <header className="relative text-white text-center py-4">
       <img
-        src="logo.png"
+        src="/logo.png"
         alt="Pokedex"
-        style={{
-          width: "223px",
-          height: "63px",
-          flexShrink: 0,
-          margin: "0 auto",
-          zIndex: 1,
-        }}
+        className="w-[223px] h-[63px] mx-auto"
       />
     </header>
   );
