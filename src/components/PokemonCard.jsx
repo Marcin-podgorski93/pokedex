@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function PokemonCard({ name, image, types, id }) {
   const descriptions = {
     pikachu: "Pikachu stores electricity in its cheeks for zapping enemies.",
@@ -66,10 +68,11 @@ function PokemonCard({ name, image, types, id }) {
             #{id.toString().padStart(3, "0")}
           </span>
         </div>
-        <p className="text-base text-gray-700 mb-4">{description}</p>
-        <button className="bg-[#ececd6] rounded-lg px-5 py-2 font-semibold text-black shadow hover:scale-105 transition mt-auto">
-          Know More
-        </button>
+        <Link to={`/pokemon/${id}`}>
+          <button className="bg-[#ececd6] rounded-lg px-5 py-2 font-semibold text-black shadow hover:scale-105 transition mt-auto">
+            Know More
+          </button>
+        </Link>
       </div>
       <div className="flex items-center justify-center w-[300px] h-[300px] bg-white p-2 overflow-hidden">
         <img src={image} alt={name} className="w-full h-full object-contain" />
