@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Globalne style */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #dd092f;
+}
