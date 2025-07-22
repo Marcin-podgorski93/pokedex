@@ -6,12 +6,12 @@ import Layout from "./components/Layout";
 function App() {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/pokemon/:id" element={<PokemonDetails />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="pokemon/:id" element={<PokemonDetails />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }

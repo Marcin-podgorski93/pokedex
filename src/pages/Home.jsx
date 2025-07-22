@@ -12,7 +12,6 @@ function Home() {
         const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20");
         const data = await res.json();
 
-        // Fetch szczegółowych danych dla każdego pokemona (np. types, image)
         const detailedData = await Promise.all(
           data.results.map(async (pokemon) => {
             const res = await fetch(pokemon.url);
